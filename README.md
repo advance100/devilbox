@@ -4,12 +4,12 @@
 
 ![Devilbox](docs/img/banner.png)
 
-**[Usage](#usage)** |
-**[Available Container](#available-container)** |
+**[用法](#usage)** |
+**[可用的容器](#available-container)** |
 **[Community](#community)** |
-**[Features](#feature-overview)** |
+**[特色](#feature-overview)** |
 **[Intranet](#intranet-overview)** |
-**[Screenshots](#screenshots)** |
+**[截图](#screenshots)** |
 **[Contributing](#contributing-)** |
 **[Logos](#logos)** |
 **[License](#license)**
@@ -28,7 +28,7 @@ The Devilbox is a modern and highly customisable **dockerized PHP stack** suppor
 
 Furthermore, the Devilbox provides an **identical** and **reproducable development environment** for different host operating systems.
 
-**Requirements**
+**前提条件**
 
 ![Linux](https://raw.githubusercontent.com/cytopia/icons/master/64x64/linux.png)
 ![OSX](https://raw.githubusercontent.com/cytopia/icons/master/64x64/osx.png)
@@ -40,9 +40,9 @@ Furthermore, the Devilbox provides an **identical** and **reproducable developme
 * [Docker Compose 1.9.0+](https://docs.docker.com/compose/compose-file/compose-versioning/#version-21)
 
 
-## Available Container
+## 可用的容器
 
-The Devilbox ships the following pre-configured Docker container in any available version.
+有以下预置的容器
 
 | Web server | SQL        | NoSQL     | Queue & Search | Misc      |
 |------------|------------|-----------|----------------|-----------|
@@ -51,21 +51,21 @@ The Devilbox ships the following pre-configured Docker container in any availabl
 |            | PerconaDB  | Redis     |                | MailHog   |
 |            | PostgreSQL |           |                | PHP       |
 
-> **Documentation:**
+> **文档:**
 > [Available Container](https://devilbox.readthedocs.io/en/latest/readings/available-container.html)
 
 
 
-## Community
+## 社区讨论
 
-Find documentation and help here
+查找文档和帮助
 
 <table width="100%" style="width:100%; display:table;">
  <thead>
   <tr>
-   <th width="33%" style="width:33%;"><h3><a href="https://devilbox.readthedocs.io" >Documentation</a></h3></th>
-   <th width="33%" style="width:33%;"><h3><a href="https://gitter.im/devilbox/Lobby" >Chat</a></h3></th>
-   <th width="33%" style="width:33%;"><h3>Forum</h3></th>
+   <th width="33%" style="width:33%;"><h3><a href="https://devilbox.readthedocs.io" >文档</a></h3></th>
+   <th width="33%" style="width:33%;"><h3><a href="https://gitter.im/devilbox/Lobby" >聊天</a></h3></th>
+   <th width="33%" style="width:33%;"><h3>论坛</h3></th>
   </tr>
  </thead>
  <tbody style="vertical-align: middle; text-align: center;">
@@ -94,28 +94,28 @@ Find documentation and help here
 
 
 
-## Usage
+## 用法
 
-#### Quick start
+#### 快速入门
 
 <table width="100%" style="width:100%; display:table;">
  <thead>
   <tr>
-   <th width="50%" style="width:50%;">Linux and MacOS</th>
+   <th width="50%" style="width:50%;">Linux 和 MacOS</th>
    <th width="50%" style="width:50%;">Windows</th>
   </tr>
  </thead>
  <tbody style="vertical-align: bottom;">
   <tr>
    <td>
-    <pre># Get the Devilbox
+    <pre># 下载Devilbox
 $ git clone https://github.com/cytopia/devilbox</pre>
-<pre># Create docker-compose environment file
+<pre># 创建 docker-compose 环境文件
 $ cd devilbox
 $ cp env-example .env</pre>
-<pre># Edit your configuration
+<pre># 编辑配置文件
 $ vim .env</pre>
-<pre># Start all container
+<pre># 启动所有的容器
 $ docker-compose up</pre>
    </td>
    <td>
@@ -130,26 +130,26 @@ C:\devilbox> docker-compose up</pre></div>
  </tbody>
 </table>
 
-> **Documentation:**
+> **文档:**
 > [Install the Devilbox](https://devilbox.readthedocs.io/en/latest/getting-started/install-the-devilbox.html) |
 > [Start the Devilbox](https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html) |
 > [.env file](https://devilbox.readthedocs.io/en/latest/configuration-files/env-file.html)
 
 
-#### Selective start
+#### 有选择的启动
 
-The above will start all containers, you can however also just start the containers you actually need. This is achieved by simply specifying them in the docker-compose command.
+上面会启动所有的容器,实际上，你可以只启动需要的容器. 只需要在docker-compose中简单地指定
 
 ```bash
 $ docker-compose up httpd php mysql redis
 ```
-> **Documentation:**
+> **文档:**
 > [Start only some container](https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html#start-some-container)
 
 
 ![Devilbox](docs/img/devilbox-dash-selective.png)
 
-#### Run different versions
+#### 运行不同的版本
 
 Every single attachable container comes with many different versions. In order to select the desired version for a container, simply edit the `.env` file and uncomment the version of choice. Any combination is possible.
 
@@ -283,10 +283,10 @@ Every single attachable container comes with many different versions. In order t
 <strong><sup>[1]</sup></strong> <strong>PHP 5.2</strong> is available to use, but it is not officially supported. The Devilbox intranet does not work with this version as PHP 5.2 does not support namespaces.
 Furthermore PHP 5.2 does only work with Apache 2.4, Nginx stable and Nginx mainline. It does not work with Apache 2.2. Use at your own risk.
 
-> **Documentation:**
+> **文档:**
 > [Change container versions](https://devilbox.readthedocs.io/en/latest/getting-started/change-container-versions.html)
 
-#### Additional services
+#### 其它服务
 
 Additionally to the default stack, there are a variety of other services that can be easily enabled and started.
 
@@ -327,11 +327,11 @@ Additionally to the default stack, there are a variety of other services that ca
  </tbody>
 </table>
 
-> **Documentation:**
+> **文档:**
 > [Enable custom container](https://devilbox.readthedocs.io/en/latest/custom-container/enable-all-container.html)
 
 
-#### Enter the container
+#### 进入容器
 
 You can also work directly inside the php container. Simply use the bundled scripts `shell.sh` (or `shell.bat` for Windows).
 The `PS1` will automatically be populated with current chosen php version.
@@ -360,25 +360,25 @@ devilbox@php-7.0.19 in /shared/httpd $</pre>
 
 Your projects can be found in `/shared/httpd`. DNS records are automatically available inside the php container. Also every other service will be available on `127.0.0.1` inside the php container (tricky socat port-forwarding).
 
-> **Documentation:**
+> **文档:**
 > [Work inside the PHP container](https://devilbox.readthedocs.io/en/latest/intermediate/work-inside-the-php-container.html) |
 > [Directory overview](https://devilbox.readthedocs.io/en/latest/getting-started/directory-overview.html)
 
 
-#### Quick Video intro
+#### 视频介绍
 
 [![Devilbox setup and workflow](docs/img/devilbox_01-setup-and-workflow.png "devilbox - setup and workflow")](https://www.youtube.com/watch?v=reyZMyt2Zzo)
 [![Devilbox email catch-all](docs/img/devilbox_02-email-catch-all.png "devilbox - email catch-all")](https://www.youtube.com/watch?v=e-U-C5WhxGY)
 
 
-## Feature overview
+## 特色概况
 
 The Devilbox has everything setup for you. The only thing you will have to install is [Docker](https://docs.docker.com/engine/installation/) and [Docker Compose](https://docs.docker.com/compose/install/). Virtual hosts and DNS entries will be created automatically, just by adding new project folders.
 
-> **Documentation:**
+> **文档:**
 > [Devilbox Prerequisites](https://devilbox.readthedocs.io/en/latest/getting-started/prerequisites.html)
 
-#### Features
+#### 特色
 
 <table>
 <tbody>
@@ -433,7 +433,7 @@ The Devilbox has everything setup for you. The only thing you will have to insta
 </tbody>
 </table>
 
-> **Documentation:**
+> **文档:**
 > [Setup Auto DNS](https://devilbox.readthedocs.io/en/latest/intermediate/setup-auto-dns.html) |
 > [Setup valid HTTPS](https://devilbox.readthedocs.io/en/latest/intermediate/setup-valid-https.html) |
 > [Configure Xdebug](https://devilbox.readthedocs.io/en/latest/intermediate/configure-php-xdebug.html) |
@@ -462,7 +462,7 @@ The following batteries are available in the Devilbox intranet by default:
 </tbody>
 </table>
 
-> **Documentation:**
+> **文档:**
 > [Devilbox Intranet](https://devilbox.readthedocs.io/en/latest/getting-started/devilbox-intranet.html)
 
 
@@ -562,11 +562,11 @@ Well-known and popular tools will be at your service as well:
 <a target="_blank" title="Webpack" href="https://webpack.js.org/"><img width="64" style="width:64px;" src="docs/img/logo_tools/webpack.png" alt="Devilbox"/></a>
 <a target="_blank" title="Yarn" href="https://yarnpkg.com/en/"><img width="64" style="width:64px;" src="docs/img/logo_tools/yarn.png" alt="Devilbox"/></a>
 
-> **Documentation:**
+> **文档:**
 > [Available Tools](https://devilbox.readthedocs.io/en/latest/readings/available-tools.html)
 
 
-#### Available PHP Modules
+#### 可用的php模块
 
 The Devilbox is a development stack, so it is made sure that a lot of PHP modules are available out of the box in order to work with many different frameworks.
 

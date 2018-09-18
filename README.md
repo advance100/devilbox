@@ -466,7 +466,7 @@ The following batteries are available in the Devilbox intranet by default:
 > [Devilbox Intranet](https://devilbox.readthedocs.io/en/latest/getting-started/devilbox-intranet.html)
 
 
-#### Tools
+#### 工具Tools
 
 The following tools will assist you on creating new projects easily as well as helping you check your code against guidelines.
 
@@ -578,11 +578,10 @@ PHP modules can be enabled or disabled on demand to reflect the state of your ta
 > [Enable/disable PHP modules](https://devilbox.readthedocs.io/en/latest/intermediate/enable-disable-php-modules.html)
 
 
-#### Custom PHP Modules
-
+#### 自定义PHP模块
 You can also copy any custom modules into `mod/(php-fpm)-<VERSION>` and add a custom `*.ini` file to load them.
 
-#### Supported Frameworks
+#### 支持的框架
 
 As far as tested there are no limitations and you can use any Framework or CMS just as you would on your live environment. Below are a few examples of extensively tested Frameworks and CMS:
 
